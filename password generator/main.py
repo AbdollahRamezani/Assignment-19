@@ -2,15 +2,15 @@ import sys
 import string
 import random
 from PySide6.QtWidgets import QApplication, QMainWindow
-from PySide6.QtGui import *   # برای وسطچین کردن متن
-from main_ui import Ui_MainWindow  # فایل یوآی که تبدیل به فایل پایتونی کردیم
+from PySide6.QtGui import *   
+from main_ui import Ui_MainWindow   
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_MainWindow()  # همون فایل پایتونی بالااست
+        self.ui = Ui_MainWindow()  
         self.ui.setupUi(self)
-        self.ui.textbox_password.setAlignment(Qt.AlignHCenter) # برای وسطچین کردن متن 
+        self.ui.textbox_password.setAlignment(Qt.AlignHCenter) 
         self.ui.ganerate_btn.clicked.connect(self.generate_password)
 
     def generate_password(self):
